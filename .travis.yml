@@ -12,8 +12,4 @@ install:
 - bundle install --full-index
 - gem install asciidoctor
 script:
-- git checkout master 
 - ruby build.rb
-- bash push.sh
-env:
-  global:
