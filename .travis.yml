@@ -4,6 +4,7 @@ rvm:
 install:
 - bundle update listen
 - bundle update jekyll-watch
+- bundle update nokogiri
 - bundle install --full-index
 - gem install asciidoctor
 script:
