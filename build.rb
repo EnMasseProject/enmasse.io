@@ -4,7 +4,7 @@ require 'fileutils'
 VERSIONS=["master"]
 ARTICLES={
     "service_admin" => "Installation",
-    "tenant" => "Managing addresses",
+    "tenant" => "Managing address spaces and addresses",
     "messaging_app_developer" => "Developing applications"
 }
 
