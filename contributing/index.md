@@ -23,4 +23,4 @@ Submit patches using github pull requests, or post patches to the mailing lists.
 
 # License
 
-EnMasse is licensed under the [Apache License, Version 2.0](LICENSE)
+EnMasse is licensed under the [Apache License, Version 2.0](/LICENSE)
