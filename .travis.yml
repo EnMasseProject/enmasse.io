@@ -11,7 +11,7 @@ script:
 - ruby build.rb
 - bundle exec jekyll build
 - bundle exec htmlproofer ./_site
-on_success:
+after_success:
 - bash push.sh
 env:
   global:
