@@ -2,9 +2,8 @@ language: ruby
 rvm:
 - 2.4.1
 install:
-- bundle update listen
-- bundle update jekyll-watch
-- bundle update nokogiri
+- bundle update listen jekyll-watch nokogiri
+- bundle update
 - bundle install --full-index
 - gem install asciidoctor
 script:
