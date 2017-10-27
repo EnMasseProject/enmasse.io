@@ -1,11 +1,6 @@
 language: ruby
 rvm:
 - 2.4.1
-before_install:
-- openssl aes-256-cbc -K $encrypted_b8ce345ff155_key -iv $encrypted_b8ce345ff155_iv -in deploy_key.enc -out deploy_key -d
-- chmod 600 deploy_key
-- eval `ssh-agent -s`
-- ssh-add deploy_key
 install:
 - bundle update listen
 - bundle update jekyll-watch
