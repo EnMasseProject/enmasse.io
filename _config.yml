@@ -30,5 +30,7 @@ theme: minima
 exclude:
   - enmasse
   - ignore
+  - build.rb
+  - push.sh
   - Gemfile
   - Gemfile.lock
