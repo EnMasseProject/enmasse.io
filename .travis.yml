@@ -7,4 +7,12 @@ install:
 - bundle install --full-index
 - gem install asciidoctor
 script:
+- git clone https://${GH_TOKEN}@github.com/EnMasseProject/enmasseproject.github.io.git _site
 - ruby build.rb
+- bundle exec jekyll build
+- bundle exec htmlproofer ./_site
+on_success:
+- bash push.sh
+env:
+  global:
+    secure: dIx+oSHZQHHt09lhFfEhsEO6DIzg0dfq9v+cJmjzGntPpD+zMCFPjBgd6CX4vcG9G9yQhYRy15hKajxn3oRFD5vgspzmGBDyw3sTuPQXmG5FIL8D4D3x9xgvJsQahO8en7SZBnNHVS5w9dBqD6IN7ZQ1DoCOqRbZ/O3cUhf8+e1ytBWGa4HcQOJWblNqafrmuhLnk83dd3bfR8L5ZzE2HCREUXwv8nKazaYO/ojBhDmgezVQ9zaf9Nw5nOHjQ+iCAcBfjDwGHqq1v3vM20cqezDGovvNHfYmEBh+4h8Qe1pXUxY0vbs4R8wbqjagMoMeD8n8wxhcMleJx7FnGh146n1ie8yum4NMxHVqZucguLr7/AngWq9svk7vnMncWpCyk5fgGAGBRYzlB2zPloElCylbK90ThVHT2/b/nuHJONN2xf0em5EvUkmD/N0eolAKexeCsYRHwY4kYRNLjjaKzkxnSvx3yZNQGTdH9xKOd42069ef0YSi0m41TSRJxU2Oo4sNB8/Mga8dE0ZfUdRrrrJ0MB4JDza9QM5uDZfalVHFcBHA2ouQVs5pWgsV4GtyZIQIaf2LmUDqVaRTJfrQKvEd63BdjlNHlzbUmsOn2uZ3dHiEqq7Eh7dV05w8U5oQARJgJ7TjIrOTPeFJT3ItqYfkxeRhy4bUV29Uln/wbKo=
