@@ -3,9 +3,10 @@ require 'fileutils'
 
 VERSIONS=["master"]
 ARTICLES={
-    "service_admin" => "Installation",
-    "tenant" => "Managing address spaces and addresses",
-    "messaging_app_developer" => "Developing applications"
+    "getting_started" => "Getting Started",
+    "service_admin" => "Service admin: Installation and configuration",
+    "tenant" => "Messaging tenant: Managing address spaces and addresses",
+    "messaging_app_developer" => "Application developer: Developing applications that send and receive messages"
 }
 
 # Write documentation menu file
