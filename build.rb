@@ -4,9 +4,9 @@ require 'fileutils'
 VERSIONS=["master"]
 ARTICLES={
     "getting_started" => "Getting Started",
-    "service_admin" => "Service admin: Installation and configuration",
-    "tenant" => "Messaging tenant: Managing address spaces and addresses",
-    "messaging_app_developer" => "Application developer: Developing applications that send and receive messages"
+    "service_admin" => "Installation and configuration",
+    "tenant" => "Managing address spaces and addresses",
+    "messaging_app_developer" => "Connecting applications to EnMasse"
 }
 
 # Write documentation menu file
