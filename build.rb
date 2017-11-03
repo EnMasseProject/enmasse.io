@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-VERSIONS=["master", "0.14.0-rc1"]
+VERSIONS=["master", "0.14.0"]
 ARTICLES={
     "getting_started" => "Getting Started",
     "service_admin" => "Installation and configuration",
