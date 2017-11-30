@@ -1,13 +1,7 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-VERSIONS=["master", "0.15.2", "0.15.0", "0.14.0"]
-ARTICLES={
-    "getting_started" => "Getting Started",
-    "service_admin" => "Installation and configuration",
-    "tenant" => "Managing address spaces and addresses",
-    "messaging_app_developer" => "Connecting applications to EnMasse"
-}
+VERSIONS=["master", "0.15.2", "0.14.0"]
 
 # Write documentation menu file
 MENU_TEMPLATE="_data/menus-header.yml"
@@ -25,6 +19,7 @@ menus.close()
 # Copy documentation folder
 ENMASSE_REPO="https://github.com/EnMasseProject/enmasse.git"
 CHECKOUT_DIR="enmasse"
+MASTER_TEMPLATE="master.adoc"
 if not File.exists?(CHECKOUT_DIR)
     `git clone #{ENMASSE_REPO} #{CHECKOUT_DIR}`
 end
@@ -38,47 +33,19 @@ VERSIONS.each do |version|
     FileUtils.rm_rf(doc_folder)
     FileUtils.cp_r(doc_dir, doc_folder)
 
-    # Generate article header
-    article_header = [
-        "---",
-        "menus:"
-    ]
-    ARTICLES.each do |article, title|
-        url = "documentation/#{version}/#{article}"
-        master = "documentation/#{version}/#{article}/master.adoc"
-        output = "_includes/documentation/#{version}/#{article}.html"
+    master = "documentation/#{version}/master.adoc"
+    FileUtils.cp_r(MASTER_TEMPLATE, master)
+    output = "_includes/documentation/#{version}/master.html"
 
-        if File.file?(master)
-            `asciidoctor #{master} -o #{output} -s`
-            article_header.push("  - url: /#{url}")
-            article_header.push("    title: #{title}")
-            article_header.push("    identifier: #{article}-#{version}")
-        end
-    end
-
-    # Generate article index.md
-    ARTICLES.each do |article, title|
-        article_index = "documentation/#{version}/#{article}/index.md"
-        index = File.open(article_index, "w")
-        article_header.each do |line|
-            index.puts(line)
-        end
-        index.puts("title: #{title}")
-        index.puts("parent_title: Documentation for EnMasse #{version}")
-        index.puts("layout: documentation")
-        index.puts("---")
-        index.puts("{% include documentation/#{version}/#{article}.html %}")
-        index.close()
-    end
+    `asciidoctor #{master} -o #{output} -s`
 
     # Generate version index.md
     index_file = "documentation/#{version}/index.md"
     index = File.open(index_file, "w")
-    article_header.each do |line|
-        index.puts(line)
-    end
+    index.puts("---")
     index.puts("title: Documentation for EnMasse #{version}")
     index.puts("layout: documentation_main")
     index.puts("---")
+    index.puts("{% include documentation/#{version}/master.html %}")
     index.close()
 end
