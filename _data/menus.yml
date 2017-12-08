@@ -15,3 +15,9 @@ docs:
   - url: /documentation/master
     title: master
     identifier: master
+  - url: /documentation/0.15.2
+    title: 0.15.2
+    identifier: 0.15.2
+  - url: /documentation/0.14.0
+    title: 0.14.0
+    identifier: 0.14.0
