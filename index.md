@@ -10,7 +10,7 @@ The EnMasse project that aims to create, as a community, an open source messagin
 # Features
 
 * Handles different <b>communication patterns</b> like request-response, pub-sub and events
-* Provides an [address model](http://enmasse.io/documentation/master/tenant/#address_model) and an [API](http://enmasse.io/documentation/master/tenant/#configuring-using-restapi) for managing messaging infrastructure
+* Provides an [address model](http://enmasse.io/documentation/master/index.html#address_model) and an [API](http://enmasse.io/documentation/master/index.html#configuring-using-restapi) for managing messaging infrastructure
 * Supports <b>multitenancy</b> with multiple isolated address spaces
 * Supports <b>authentication</b> of clients and identity management using [keycloak](http://www.keycloak.org/)
 * Built on <b>Kubernetes/OpenShift</b>: deploy <b>on-premise</b> or in the <b>cloud</b>
