@@ -10,7 +10,7 @@ script:
 - git clone https://${GH_TOKEN}@github.com/EnMasseProject/enmasseproject.github.io.git _site
 - ruby build.rb
 - bundle exec jekyll build
-  #- bundle exec htmlproofer ./_site
+- bundle exec htmlproofer ./_site
 after_success:
 - bash push.sh
 env:
