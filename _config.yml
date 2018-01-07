@@ -17,6 +17,9 @@ title: EnMasse - Messaging as a Service
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://enmasse.io" # the base hostname & protocol for your site, e.g. http://example.com
 github: [metadata]
+github_username: enmasseproject
+twitter_username: enmasseio
+email: enmasse@redhat.com
 plugins_dir:
   - jekyll-menus
     #  - jekyll-asciidoc
