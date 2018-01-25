@@ -27,4 +27,4 @@ Welcome to the EnMasse documentation. Select the version of EnMasse you are usin
 
 # Examples
 
-* [EnMasse and Camel](https://github.com/abouchama/camel-enmasse-amq)
+* [EnMasse and Camel](https://github.com/abouchama/camel-enmasse-amqps)
