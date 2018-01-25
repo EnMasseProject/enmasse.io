@@ -25,3 +25,6 @@ Welcome to the EnMasse documentation. Select the version of EnMasse you are usin
 
 * [EnMasse and IoT Workshop](https://github.com/EnMasseProject/enmasse-workshop/)
 
+# Examples
+
+* [EnMasse and Camel](https://github.com/abouchama/camel-enmasse-amq)
