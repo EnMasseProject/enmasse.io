@@ -34,9 +34,9 @@ VERSIONS.each do |version|
     FileUtils.cp_r(doc_dir, doc_folder)
 
     master = "documentation/#{version}/master.adoc"
-    if (!File.exists?(master)) {
+    if !File.exists?(master) then
         FileUtils.cp_r(MASTER_TEMPLATE, master)
-    }
+    end
     output = "_includes/documentation/#{version}/master.html"
 
     `asciidoctor #{master} -o #{output} -s`
