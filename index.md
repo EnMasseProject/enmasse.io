@@ -12,7 +12,7 @@ The EnMasse project aims to create, as a community, an open source messaging pla
 * Handles different <b>communication patterns</b> like request-response, pub-sub and events
 * Provides an [address model](http://enmasse.io/documentation/master/index.html#address_model) and an [API](http://enmasse.io/documentation/master/index.html#configuring-using-restapi) for managing messaging infrastructure
 * Supports <b>multitenancy</b> with multiple isolated address spaces
-* Supports <b>authentication</b> of clients and identity management using [keycloak](http://www.keycloak.org/)
+* Supports <b>authentication</b> and <b>authorization</b> of clients and identity management using [keycloak](http://www.keycloak.org/)
 * Built on <b>Kubernetes/OpenShift</b>: deploy <b>on-premise</b> or in the <b>cloud</b>
 
 EnMasse supports a `standard` and a `brokered` address space types, each with different semantics. EnMasse can be used for many purposes, such as moving your messaging infrastructure to the cloud without depending on a specific cloud provider, building a scalable messaging backbone for IoT, or just as a cloud-ready version of a message broker.
