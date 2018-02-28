@@ -15,7 +15,9 @@ The EnMasse project aims to create, as a community, an open source messaging pla
 * Supports <b>authentication</b> and <b>authorization</b> of clients and identity management using [keycloak](http://www.keycloak.org/)
 * Built on <b>Kubernetes/OpenShift</b>: deploy <b>on-premise</b> or in the <b>cloud</b>
 
-EnMasse supports a `standard` and a `brokered` address space types, each with different semantics. EnMasse can be used for many purposes, such as moving your messaging infrastructure to the cloud without depending on a specific cloud provider, building a scalable messaging backbone for IoT, or just as a cloud-ready version of a message broker.
+EnMasse can be used for many purposes, such as moving your messaging infrastructure to the cloud <b>without depending on a specific cloud provider</b>, building a scalable messaging backbone for <b>IoT</b>, or just as a <b>cloud-ready</b> version of a message broker.
+
+EnMasse supports a `standard` and a `brokered` address space types, each with different semantics. 
 
 #### Standard address space
 
