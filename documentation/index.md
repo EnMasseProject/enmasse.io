@@ -10,6 +10,7 @@ Welcome to the EnMasse documentation. Select the version of EnMasse you are usin
 
 # Slides
 
+* Open sourcing the IoT [slides](https://www.slideshare.net/paolopat/open-sourcing-the-iot-93787899) (CloudConf, April 2018)
 * Open sourcing the messaging and IoT [video](https://www.youtube.com/watch?v=ZIp9EPQ25eM) and [slides](https://www.slideshare.net/paolopat/open-sourcing-the-messaging-and-iot) (IoT Weekend, December 2017)
 * [Open sourcing the IoT](https://www.slideshare.net/paolopat/open-sourcing-the-iot) (IoT Day Italy, November 2017)
 * [EnMasse : open sourcing the messaging & IoT](https://www.slideshare.net/paolopat/enmasse-open-sourcing-the-messaging-iot-81861295)(Red Hat Open Source Day, November 2017)
