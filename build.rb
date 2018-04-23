@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-VERSIONS=["master", "0.17.0", "0.16.1", "0.15.3"]
+VERSIONS=["master", "0.19.0", "0.18.0", "0.17.2"]
 
 # Write documentation menu file
 MENU_TEMPLATE="_data/menus-header.yml"
@@ -34,9 +34,6 @@ VERSIONS.each do |version|
     FileUtils.cp_r(doc_dir, doc_folder)
 
     master = "documentation/#{version}/master.adoc"
-    if !File.exists?(master) then
-        FileUtils.cp_r(MASTER_TEMPLATE, master)
-    end
     output = "_includes/documentation/#{version}/master.html"
 
     `asciidoctor #{master} -o #{output} -s`

@@ -10,7 +10,7 @@ script:
 - git clone https://${GH_TOKEN}@github.com/EnMasseProject/enmasseproject.github.io.git _site
 - ruby build.rb
 - bundle exec jekyll build
-- bundle exec htmlproofer ./_site --url-ignore http://enmasse.io/documentation/master/messaging_app_developer/#connecting,https://activemq.apache.org/artemis/,https://qpid.apache.org/components/dispatch-router/index.html,https://prometheus.io/docs/visualization/grafana/#creating-a-prometheus-data-source
+  #- bundle exec htmlproofer ./_site --url-ignore http://enmasse.io/documentation/master/messaging_app_developer/#connecting,https://activemq.apache.org/artemis/,https://qpid.apache.org/components/dispatch-router/index.html,https://prometheus.io/docs/visualization/grafana/#creating-a-prometheus-data-source
 after_success:
 - bash push.sh
 env:
