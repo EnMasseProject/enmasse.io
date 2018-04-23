@@ -29,3 +29,4 @@ Welcome to the EnMasse documentation. Select the version of EnMasse you are usin
 # Examples
 
 * [EnMasse and Camel](https://github.com/abouchama/camel-enmasse-amqps)
+* [OpenShift AMQP Clients](https://github.com/lulf/openshift-amqp-clients)
