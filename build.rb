@@ -30,7 +30,7 @@ VERSIONS.each do |version|
 
     doc_dir = "#{CHECKOUT_DIR}/documentation"
     # Generate RESTAPI reference
-    `java -jar utils/swagger2markup.jar convert -i #{CHECKOUT_DIR}/api-server/src/main/resources/swagger.json -f #{CHECKOUT_DIR}/documentation/common/restapi-reference.adoc`
+    `java -jar utils/swagger2markup.jar convert -i #{CHECKOUT_DIR}/api-server/src/main/resources/swagger.json -f #{CHECKOUT_DIR}/documentation/common/restapi-reference`
     doc_folder = "documentation/#{version}"
     FileUtils.rm_rf(doc_folder)
     FileUtils.cp_r(doc_dir, doc_folder)
