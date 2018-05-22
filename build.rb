@@ -36,17 +36,17 @@ VERSIONS.each do |version|
     FileUtils.cp_r(doc_dir, doc_folder)
 
     master = "documentation/#{version}/master.adoc"
-    output = "_includes/documentation/#{version}/master.html"
+    output = "documentation/#{version}/index.html"
 
-    `asciidoctor #{master} -o #{output} -s`
+    `asciidoctor #{master} -o #{output}`
 
     # Generate version index.md
-    index_file = "documentation/#{version}/index.md"
-    index = File.open(index_file, "w")
-    index.puts("---")
-    index.puts("title: Documentation for EnMasse #{version}")
-    index.puts("layout: documentation_main")
-    index.puts("---")
-    index.puts("{% include documentation/#{version}/master.html %}")
-    index.close()
+    #index_file = "documentation/#{version}/index.md"
+    #index = File.open(index_file, "w")
+    #index.puts("---")
+    #index.puts("title: Documentation for EnMasse #{version}")
+    #index.puts("layout: documentation_main")
+    #index.puts("---")
+    #index.puts("{% include documentation/#{version}/master.html %}")
+    #index.close()
 end
