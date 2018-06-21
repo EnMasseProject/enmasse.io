@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-VERSIONS=["master", "0.20.0", "0.19.0", "0.18.0", "0.17.2"]
+VERSIONS=["master", "0.21.0", "0.20.0", "0.19.0"]
 
 # Write documentation menu file
 MENU_TEMPLATE="_data/menus-header.yml"
