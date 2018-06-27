@@ -5,25 +5,39 @@ header:
   - url: /documentation
     title: Documentation
     identifier: documentation
-  - url: https://github.com/EnMasseProject/enmasse/releases/
+  - url: /downloads
     title: Downloads
     identifier: downloads
-  - url: /contributing
-    title: Contributing
-    identifier: contributing
-docs:
+docslatest:
+  - url: /documentation/0.21.0
+    title: 0.21.0
+    identifier: 0.21.0
+docsall:
   - url: /documentation/master
     title: master
     identifier: master
+  - url: /documentation/0.21.0
+    title: 0.21.0
+    identifier: 0.21.0
+docsolder:
   - url: /documentation/0.20.0
     title: 0.20.0
     identifier: 0.20.0
   - url: /documentation/0.19.0
     title: 0.19.0
     identifier: 0.19.0
-  - url: /documentation/0.18.0
-    title: 0.18.0
-    identifier: 0.18.0
-  - url: /documentation/0.17.2
-    title: 0.17.2
-    identifier: 0.17.2
+docsmaster:
+  - url: /documentation/master
+    title: master
+    identifier: master
+dllatest:
+  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.21.0
+    title: 0.21.0
+    identifier: 0.21.0
+dlolder:
+  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.20.0
+    title: 0.20.0
+    identifier: 0.20.0
+  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.19.0
+    title: 0.19.0
+    identifier: 0.19.0

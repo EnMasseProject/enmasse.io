@@ -1,14 +1,24 @@
 ---
 layout: page
 ---
-# Documentation
+## Documentation
 
-Welcome to the EnMasse documentation. Select the version of EnMasse you are using.
+### Latest release
 
-{% assign menu = site.menus.docs %}
+{% assign menu = site.menus.docslatest %}
 {% include doc_menu.html %}
 
-# Slides
+### Master
+
+{% assign menu = site.menus.docsmaster %}
+{% include doc_menu.html %}
+
+### Older releases
+
+{% assign menu = site.menus.docsolder %}
+{% include doc_menu.html %}
+
+## Slides
 
 * Open sourcing the IoT [slides](https://www.slideshare.net/paolopat/open-sourcing-the-iot-93787899) (CloudConf, April 2018)
 * Open sourcing the messaging and IoT [video](https://www.youtube.com/watch?v=ZIp9EPQ25eM) and [slides](https://www.slideshare.net/paolopat/open-sourcing-the-messaging-and-iot) (IoT Weekend, December 2017)
@@ -22,11 +32,11 @@ Welcome to the EnMasse documentation. Select the version of EnMasse you are usin
 * [Messaging-as-a-Service](https://www.slideshare.net/UlfLilleengen/rivieradev-75928765) (RivieraDev, May 2017)
 
 
-# Workshops
+## Workshops
 
 * [EnMasse and IoT Workshop](https://github.com/EnMasseProject/enmasse-workshop/)
 
-# Examples
+## Examples
 
 * [EnMasse and Camel](https://github.com/abouchama/camel-enmasse-amqps)
 * [OpenShift AMQP Clients](https://github.com/lulf/openshift-amqp-clients)
