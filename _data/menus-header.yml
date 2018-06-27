@@ -5,9 +5,6 @@ header:
   - url: /documentation
     title: Documentation
     identifier: documentation
-  - url: https://github.com/EnMasseProject/enmasse/releases/
+  - url: /downloads
     title: Downloads
     identifier: downloads
-  - url: /contributing
-    title: Contributing
-    identifier: contributing

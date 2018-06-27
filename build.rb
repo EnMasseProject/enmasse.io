@@ -3,17 +3,53 @@ require 'fileutils'
 
 VERSIONS=["master", "0.21.0", "0.20.0", "0.19.0"]
 
+LATEST_VERSION=VERSIONS[1] 
+OLD_VERSIONS=VERSIONS.drop(2)
+DL_PREFIX="https://github.com/EnMasseProject/enmasse/releases/tag"
+
 # Write documentation menu file
 MENU_TEMPLATE="_data/menus-header.yml"
 MENU_FILE="_data/menus.yml"
 FileUtils.copy_file(MENU_TEMPLATE, MENU_FILE)
 menus = File.open(MENU_FILE, "a")
-menus.puts("docs:")
-VERSIONS.each do |version|
+
+menus.puts("docslatest:")
+menus.puts("  - url: /documentation/#{LATEST_VERSION}")
+menus.puts("    title: #{LATEST_VERSION}")
+menus.puts("    identifier: #{LATEST_VERSION}")
+
+menus.puts("docsall:")
+["master", LATEST_VERSION].each do |version|
     menus.puts("  - url: /documentation/#{version}")
     menus.puts("    title: #{version}")
     menus.puts("    identifier: #{version}")
 end
+
+menus.puts("docsolder:")
+OLD_VERSIONS.each do |version|
+    menus.puts("  - url: /documentation/#{version}")
+    menus.puts("    title: #{version}")
+    menus.puts("    identifier: #{version}")
+end
+
+menus.puts("docsmaster:")
+menus.puts("  - url: /documentation/master")
+menus.puts("    title: master")
+menus.puts("    identifier: master")
+
+
+menus.puts("dllatest:")
+menus.puts("  - url: #{DL_PREFIX}/#{LATEST_VERSION}")
+menus.puts("    title: #{LATEST_VERSION}")
+menus.puts("    identifier: #{LATEST_VERSION}")
+
+menus.puts("dlolder:")
+OLD_VERSIONS.each do |version|
+    menus.puts("  - url: #{DL_PREFIX}/#{version}")
+    menus.puts("    title: #{version}")
+    menus.puts("    identifier: #{version}")
+end
+
 menus.close()
 
 # Copy documentation folder
