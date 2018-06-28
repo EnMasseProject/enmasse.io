@@ -18,7 +18,7 @@ EnMasse can be used for many purposes, such as moving your messaging infrastruct
 
 ## Downloads
 
-EnMasse releases are available for download on our [GitHub](https://github.com/EnMasseProject/enmasse/releases) page. Docker images used in the releases are published to [Docker Hub](https://hub.docker.com/r/enmasseproject/).
+EnMasse releases are available for download on our [GitHub](https://github.com/EnMasseProject/enmasse/releases) page. The release artifacts contain YAML files and Ansible playbooks for deployment on OpenShift and Kubernetes. Docker images used in the releases are published to [Docker Hub](https://hub.docker.com/r/enmasseproject/).
 
 {% assign menu = site.menus.dllatest %}
 {% include doc_menu.html %}
