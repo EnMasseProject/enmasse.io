@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-VERSIONS=["master", "0.21.2", "0.21.0", "0.20.0", "0.19.0"]
+VERSIONS=["master", "0.22.0", "0.21.2", "0.20.0"]
 
 LATEST_VERSION=VERSIONS[1] 
 OLD_VERSIONS=VERSIONS.drop(2)
