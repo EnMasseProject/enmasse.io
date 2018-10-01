@@ -65,16 +65,30 @@ VERSIONS.each do |version|
     `git -C #{CHECKOUT_DIR} pull --rebase`
 
     doc_dir = "#{CHECKOUT_DIR}/documentation"
-    # Generate RESTAPI reference
-    `java -jar utils/swagger2markup.jar convert -i #{CHECKOUT_DIR}/api-server/src/main/resources/swagger.json -f #{CHECKOUT_DIR}/documentation/common/restapi-reference`
     doc_folder = "documentation/#{version}"
-    FileUtils.rm_rf(doc_folder)
-    FileUtils.cp_r(doc_dir, doc_folder)
+    # Generate RESTAPI reference
 
-    master = "documentation/#{version}/master.adoc"
-    output = "documentation/#{version}/index.html"
+    if version == "0.22.0" or version == "0.21.2" or version == "0.20.0"
+    then
+        `java -jar utils/swagger2markup.jar convert -i #{CHECKOUT_DIR}/api-server/src/main/resources/swagger.json -f #{CHECKOUT_DIR}/documentation/common/restapi-reference`
+        FileUtils.rm_rf(doc_folder)
+        FileUtils.cp_r(doc_dir, doc_folder)
 
-    `asciidoctor #{master} -o #{output}`
+        master = "documentation/#{version}/master.adoc"
+        output = "documentation/#{version}/index.html"
+
+        `asciidoctor #{master} -o #{output}`
+    else
+        `make -C #{CHECKOUT_DIR} templates`
+        FileUtils.rm_rf(doc_folder)
+        v = version
+        if version == "master"
+        then
+            v = "latest"
+        end
+        print "V: #{v}"
+        FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-#{v}/docs", doc_folder)
+    end
 
     # Generate version index.md
     #index_file = "documentation/#{version}/index.md"
