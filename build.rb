@@ -79,7 +79,8 @@ VERSIONS.each do |version|
 
         `asciidoctor #{master} -o #{output}`
     else
-        `make -C #{CHECKOUT_DIR} templates`
+        `make -C #{CHECKOUT_DIR} docu_html`
+        `make -C #{CHECKOUT_DIR} templates || true`
         FileUtils.rm_rf(doc_folder)
         v = version
         if version == "master"
