@@ -61,6 +61,7 @@ if not File.exists?(CHECKOUT_DIR)
 end
 
 VERSIONS.each do |version|
+    puts("Generating for #{version}")
     `git -C #{CHECKOUT_DIR} checkout #{version}`
     `git -C #{CHECKOUT_DIR} pull --rebase`
 
@@ -79,16 +80,10 @@ VERSIONS.each do |version|
 
         `asciidoctor #{master} -o #{output}`
     else
-        `make -C #{CHECKOUT_DIR} docu_html`
-        `make -C #{CHECKOUT_DIR} templates || true`
+        `make -C #{CHECKOUT_DIR}/templates clean`
+        `make -C #{CHECKOUT_DIR} templates`
         FileUtils.rm_rf(doc_folder)
-        v = version
-        if version == "master"
-        then
-            v = "latest"
-        end
-        print "V: #{v}"
-        FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-#{v}/docs", doc_folder)
+        FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs", doc_folder)
     end
 
     # Generate version index.md

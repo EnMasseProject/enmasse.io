@@ -9,35 +9,35 @@ header:
     title: Downloads
     identifier: downloads
 docslatest:
-  - url: /documentation/0.22.0
-    title: 0.22.0
-    identifier: 0.22.0
+  - url: /documentation/0.23.0
+    title: 0.23.0
+    identifier: 0.23.0
 docsall:
   - url: /documentation/master
     title: master
     identifier: master
+  - url: /documentation/0.23.0
+    title: 0.23.0
+    identifier: 0.23.0
+docsolder:
   - url: /documentation/0.22.0
     title: 0.22.0
     identifier: 0.22.0
-docsolder:
   - url: /documentation/0.21.2
     title: 0.21.2
     identifier: 0.21.2
-  - url: /documentation/0.20.0
-    title: 0.20.0
-    identifier: 0.20.0
 docsmaster:
   - url: /documentation/master
     title: master
     identifier: master
 dllatest:
+  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.23.0
+    title: 0.23.0
+    identifier: 0.23.0
+dlolder:
   - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.22.0
     title: 0.22.0
     identifier: 0.22.0
-dlolder:
   - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.21.2
     title: 0.21.2
     identifier: 0.21.2
-  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.20.0
-    title: 0.20.0
-    identifier: 0.20.0
