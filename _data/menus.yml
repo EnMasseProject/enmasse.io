@@ -23,13 +23,10 @@ kubernetesdocsolder:
   - url: /documentation/kubernetes/0.23.2
     title: 0.23.2
     identifier: kubernetes-0.23.2
-  - url: /documentation/kubernetes/0.23.2
-    title: 0.23.2
-    identifier: kubernetes-0.23.2
 kubernetesdocsmaster:
   - url: /documentation/kubernetes/master
-    title: master
-    identifier: kubernetes-master
+    title: latest
+    identifier: kubernetes-latest
 openshiftdocslatest:
   - url: /documentation/openshift/0.24.1
     title: 0.24.1
@@ -45,21 +42,15 @@ openshiftdocsolder:
   - url: /documentation/openshift/0.23.2
     title: 0.23.2
     identifier: openshift-0.23.2
-  - url: /documentation/openshift/0.23.2
-    title: 0.23.2
-    identifier: openshift-0.23.2
 openshiftdocsmaster:
   - url: /documentation/openshift/master
-    title: master
-    identifier: openshift-master
+    title: latest
+    identifier: openshift-latest
 dllatest:
   - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.24.1
     title: 0.24.1
     identifier: 0.24.1
 dlolder:
-  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.23.2
-    title: 0.23.2
-    identifier: 0.23.2
   - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.23.2
     title: 0.23.2
     identifier: 0.23.2

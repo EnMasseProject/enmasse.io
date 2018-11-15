@@ -36,8 +36,8 @@ menus.puts("#{platform}docslatest:")
     end
     menus.puts("#{platform}docsmaster:")
     menus.puts("  - url: /documentation/#{platform}/#{docsmaster}")
-    menus.puts("    title: #{docsmaster}")
-    menus.puts("    identifier: #{platform}-#{docsmaster}")
+    menus.puts("    title: latest")
+    menus.puts("    identifier: #{platform}-latest")
 end
 
 

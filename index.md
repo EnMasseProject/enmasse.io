@@ -27,10 +27,7 @@ Older releases can be found in the [Downloads](/downloads) page.
 
 ## Documentation
 
-{% assign menu = site.menus.docsall %}
-{% include doc_menu.html %}
-
-Documentation for older releases can be found in the [Documentation](/documentation) page.
+Documentation can be found on the [Documentation](/documentation) page.
 
 ## Getting help
 
