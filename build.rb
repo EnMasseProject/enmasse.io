@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-VERSIONS=["master", "0.24.1", "0.23.2", "0.22.0"]
+PLATFORMS=["kubernetes", "openshift"]
+VERSIONS=["master", "0.24.1", "0.23.2"]
 
 LATEST_VERSION=VERSIONS[1] 
 OLD_VERSIONS=VERSIONS.drop(2)
 DL_PREFIX="https://github.com/EnMasseProject/enmasse/releases/tag"
+docsmaster=VERSIONS[0]
 
 # Write documentation menu file
 MENU_TEMPLATE="_data/menus-header.yml"
@@ -13,29 +15,30 @@ MENU_FILE="_data/menus.yml"
 FileUtils.copy_file(MENU_TEMPLATE, MENU_FILE)
 menus = File.open(MENU_FILE, "a")
 
-menus.puts("docslatest:")
-menus.puts("  - url: /documentation/#{LATEST_VERSION}")
-menus.puts("    title: #{LATEST_VERSION}")
-menus.puts("    identifier: #{LATEST_VERSION}")
+PLATFORMS.each do |platform|
+menus.puts("#{platform}docslatest:")
+    menus.puts("  - url: /documentation/#{platform}/#{LATEST_VERSION}")
+    menus.puts("    title: #{LATEST_VERSION}")
+    menus.puts("    identifier: #{platform}-#{LATEST_VERSION}")
 
-menus.puts("docsall:")
-["master", LATEST_VERSION].each do |version|
-    menus.puts("  - url: /documentation/#{version}")
-    menus.puts("    title: #{version}")
-    menus.puts("    identifier: #{version}")
+    menus.puts("#{platform}docsall:")
+    [docsmaster, LATEST_VERSION].each do |version|
+        menus.puts("  - url: /documentation/#{platform}/#{version}")
+        menus.puts("    title: #{version}")
+        menus.puts("    identifier: #{platform}-#{version}")
+    end
+
+    menus.puts("#{platform}docsolder:")
+    OLD_VERSIONS.each do |version|
+        menus.puts("  - url: /documentation/#{platform}/#{version}")
+        menus.puts("    title: #{version}")
+        menus.puts("    identifier: #{platform}-#{version}")
+    end
+    menus.puts("#{platform}docsmaster:")
+    menus.puts("  - url: /documentation/#{platform}/#{docsmaster}")
+    menus.puts("    title: #{docsmaster}")
+    menus.puts("    identifier: #{platform}-#{docsmaster}")
 end
-
-menus.puts("docsolder:")
-OLD_VERSIONS.each do |version|
-    menus.puts("  - url: /documentation/#{version}")
-    menus.puts("    title: #{version}")
-    menus.puts("    identifier: #{version}")
-end
-
-menus.puts("docsmaster:")
-menus.puts("  - url: /documentation/master")
-menus.puts("    title: master")
-menus.puts("    identifier: master")
 
 
 menus.puts("dllatest:")
@@ -55,7 +58,6 @@ menus.close()
 # Copy documentation folder
 ENMASSE_REPO="https://github.com/EnMasseProject/enmasse.git"
 CHECKOUT_DIR="enmasse"
-MASTER_TEMPLATE="master.adoc"
 if not File.exists?(CHECKOUT_DIR)
     `git clone #{ENMASSE_REPO} #{CHECKOUT_DIR}`
 end
@@ -65,25 +67,25 @@ VERSIONS.each do |version|
     `git -C #{CHECKOUT_DIR} checkout #{version}`
     `git -C #{CHECKOUT_DIR} pull --rebase`
 
-    doc_dir = "#{CHECKOUT_DIR}/documentation"
-    doc_folder = "documentation/#{version}"
     # Generate RESTAPI reference
 
-    if version == "0.22.0" or version == "0.21.2" or version == "0.20.0"
+    `make -C #{CHECKOUT_DIR}/templates clean`
+    `make -C #{CHECKOUT_DIR} templates`
+    if version == "0.23.2" or version == "0.24.1"
     then
-        `java -jar utils/swagger2markup.jar convert -i #{CHECKOUT_DIR}/api-server/src/main/resources/swagger.json -f #{CHECKOUT_DIR}/documentation/common/restapi-reference`
-        FileUtils.rm_rf(doc_folder)
-        FileUtils.cp_r(doc_dir, doc_folder)
-
-        master = "documentation/#{version}/master.adoc"
-        output = "documentation/#{version}/index.html"
-
-        `asciidoctor #{master} -o #{output}`
+        PLATFORMS.each do |platform|
+            doc_folder = "documentation/#{platform}/#{version}"
+            FileUtils.rm_rf(doc_folder)
+            FileUtils.mkdir_p("documentation/#{platform}")
+            FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs", doc_folder)
+        end
     else
-        `make -C #{CHECKOUT_DIR}/templates clean`
-        `make -C #{CHECKOUT_DIR} templates`
-        FileUtils.rm_rf(doc_folder)
-        FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs", doc_folder)
+        PLATFORMS.each do |platform|
+            doc_folder = "documentation/#{platform}/#{version}"
+            FileUtils.rm_rf(doc_folder)
+            FileUtils.mkdir_p("documentation/#{platform}")
+            FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs/#{platform}", doc_folder)
+        end
     end
 
     # Generate version index.md

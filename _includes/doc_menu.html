@@ -1,7 +1,9 @@
-<ul>
+{% if menu.to_a.size > 1 %}
 {% for item in menu %}
-  <li class="menu-item-{{ loop.index }}">
-    <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
-  </li>
+<a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a><br />
 {% endfor %}
-</ul>
+{% else %}
+{% for item in menu %}
+<a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
+{% endfor %}
+{% endif %}

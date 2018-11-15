@@ -3,20 +3,73 @@ layout: page
 ---
 ## Documentation
 
-### Latest release
-
-{% assign menu = site.menus.docslatest %}
+<table bgcolor="#F5F5F5" cellspacing="5" style="padding-left: 20px; padding-top: 20px; padding-bottom: 30px; padding-right: 20px; width: 30%; display: inline-block;">
+<thead>
+<tr>
+<th colspan="2" align="left" style="padding-bottom: 10px;">Kubernetes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="75%">Latest release</td>
+<td>
+{% assign menu = site.menus.kubernetesdocslatest %}
 {% include doc_menu.html %}
-
-### Master
-
-{% assign menu = site.menus.docsmaster %}
+</td>
+</tr>
+<tr>
+<td>Master</td>
+<td>
+{% assign menu = site.menus.kubernetesdocsmaster %}
 {% include doc_menu.html %}
-
-### Older releases
-
-{% assign menu = site.menus.docsolder %}
+</td>
+</tr>
+<tr valign="top">
+<td>Older releases</td>
+<td>
+{% assign menu = site.menus.kubernetesdocsolder %}
 {% include doc_menu.html %}
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="5" style="padding-left: 20px; padding-top: 20px; padding-bottom: 30px; padding-right: 20px; width: 40px; display: inline-block;" />
+
+<table bgcolor="#F5F5F5" cellspacing="5" style="padding-left: 20px; padding-top: 20px; padding-bottom: 30px; padding-right: 20px; width: 30%; display: inline-block;">
+<thead>
+<tr>
+<th colspan="2" align="left" style="padding-bottom: 10px;">OpenShift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="75%">Latest release</td>
+<td>
+{% assign menu = site.menus.openshiftdocslatest %}
+{% include doc_menu.html %}
+</td>
+</tr>
+<tr>
+<td>Master</td>
+<td>
+{% assign menu = site.menus.openshiftdocsmaster %}
+{% include doc_menu.html %}
+</td>
+</tr>
+<tr valign="top">
+<td>Older releases</td>
+<td>
+{% assign menu = site.menus.openshiftdocsolder %}
+{% include doc_menu.html %}
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<br />
 
 ## Slides
 
