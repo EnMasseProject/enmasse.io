@@ -9,43 +9,43 @@ header:
     title: Downloads
     identifier: downloads
 kubernetesdocslatest:
-  - url: /documentation/kubernetes/0.24.1
+  - url: /documentation/0.24.1/kubernetes
     title: 0.24.1
-    identifier: kubernetes-0.24.1
+    identifier: 0.24.1-kubernetes
 kubernetesdocsall:
-  - url: /documentation/kubernetes/master
+  - url: /documentation/master/kubernetes
     title: master
-    identifier: kubernetes-master
-  - url: /documentation/kubernetes/0.24.1
+    identifier: master-kubernetes
+  - url: /documentation/0.24.1/kubernetes
     title: 0.24.1
-    identifier: kubernetes-0.24.1
+    identifier: 0.24.1-kubernetes
 kubernetesdocsolder:
-  - url: /documentation/kubernetes/0.23.2
+  - url: /documentation/0.23.2/kubernetes
     title: 0.23.2
-    identifier: kubernetes-0.23.2
+    identifier: 0.23.2-kubernetes
 kubernetesdocsmaster:
-  - url: /documentation/kubernetes/master
+  - url: /documentation/master/kubernetes
     title: latest
-    identifier: kubernetes-latest
+    identifier: latest-kubernetes
 openshiftdocslatest:
-  - url: /documentation/openshift/0.24.1
+  - url: /documentation/0.24.1/openshift
     title: 0.24.1
-    identifier: openshift-0.24.1
+    identifier: 0.24.1-openshift
 openshiftdocsall:
-  - url: /documentation/openshift/master
+  - url: /documentation/master/openshift
     title: master
-    identifier: openshift-master
-  - url: /documentation/openshift/0.24.1
+    identifier: master-openshift
+  - url: /documentation/0.24.1/openshift
     title: 0.24.1
-    identifier: openshift-0.24.1
+    identifier: 0.24.1-openshift
 openshiftdocsolder:
-  - url: /documentation/openshift/0.23.2
+  - url: /documentation/0.23.2/openshift
     title: 0.23.2
-    identifier: openshift-0.23.2
+    identifier: 0.23.2-openshift
 openshiftdocsmaster:
-  - url: /documentation/openshift/master
+  - url: /documentation/master/openshift
     title: latest
-    identifier: openshift-latest
+    identifier: latest-openshift
 dllatest:
   - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.24.1
     title: 0.24.1

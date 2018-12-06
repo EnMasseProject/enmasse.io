@@ -17,27 +17,27 @@ menus = File.open(MENU_FILE, "a")
 
 PLATFORMS.each do |platform|
 menus.puts("#{platform}docslatest:")
-    menus.puts("  - url: /documentation/#{platform}/#{LATEST_VERSION}")
+    menus.puts("  - url: /documentation/#{LATEST_VERSION}/#{platform}")
     menus.puts("    title: #{LATEST_VERSION}")
-    menus.puts("    identifier: #{platform}-#{LATEST_VERSION}")
+    menus.puts("    identifier: #{LATEST_VERSION}-#{platform}")
 
     menus.puts("#{platform}docsall:")
     [docsmaster, LATEST_VERSION].each do |version|
-        menus.puts("  - url: /documentation/#{platform}/#{version}")
+        menus.puts("  - url: /documentation/#{version}/#{platform}")
         menus.puts("    title: #{version}")
-        menus.puts("    identifier: #{platform}-#{version}")
+        menus.puts("    identifier: #{version}-#{platform}")
     end
 
     menus.puts("#{platform}docsolder:")
     OLD_VERSIONS.each do |version|
-        menus.puts("  - url: /documentation/#{platform}/#{version}")
+        menus.puts("  - url: /documentation/#{version}/#{platform}")
         menus.puts("    title: #{version}")
-        menus.puts("    identifier: #{platform}-#{version}")
+        menus.puts("    identifier: #{version}-#{platform}")
     end
     menus.puts("#{platform}docsmaster:")
-    menus.puts("  - url: /documentation/#{platform}/#{docsmaster}")
+    menus.puts("  - url: /documentation/#{docsmaster}/#{platform}")
     menus.puts("    title: latest")
-    menus.puts("    identifier: #{platform}-latest")
+    menus.puts("    identifier: latest-#{platform}")
 end
 
 
@@ -74,16 +74,16 @@ VERSIONS.each do |version|
     if version == "0.23.2" or version == "0.24.1"
     then
         PLATFORMS.each do |platform|
-            doc_folder = "documentation/#{platform}/#{version}"
+            doc_folder = "documentation/#{version}/#{platform}"
             FileUtils.rm_rf(doc_folder)
-            FileUtils.mkdir_p("documentation/#{platform}")
+            FileUtils.mkdir_p("documentation/#{version}")
             FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs", doc_folder)
         end
     else
         PLATFORMS.each do |platform|
-            doc_folder = "documentation/#{platform}/#{version}"
+            doc_folder = "documentation/#{version}/#{platform}"
             FileUtils.rm_rf(doc_folder)
-            FileUtils.mkdir_p("documentation/#{platform}")
+            FileUtils.mkdir_p("documentation/#{version}")
             FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs/#{platform}", doc_folder)
         end
     end
