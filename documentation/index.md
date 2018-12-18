@@ -91,5 +91,6 @@ layout: page
 
 ## Examples
 
+* [EnMasse and Hono](https://www.eclipse.org/hono/deployment/openshift_s2i/)
 * [EnMasse and Camel](https://github.com/abouchama/camel-enmasse-amqps)
 * [OpenShift AMQP Clients](https://github.com/lulf/openshift-amqp-clients)
