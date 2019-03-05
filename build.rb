@@ -2,7 +2,7 @@
 require 'fileutils'
 
 PLATFORMS=["kubernetes", "openshift"]
-VERSIONS=["master", "0.26.2", "0.25.0", "0.24.1", "0.23.2"]
+VERSIONS=["master", "0.26.3", "0.25.0", "0.24.1", "0.23.2"]
 
 LATEST_VERSION=VERSIONS[1] 
 OLD_VERSIONS=VERSIONS.drop(2)
