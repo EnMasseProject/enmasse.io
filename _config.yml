@@ -13,13 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: EnMasse - Messaging as a Service
+title: EnMasse
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://enmasse.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://enmasse.io" # the base hostname & protocol for your site, e.g. http://example.com
+description: >-
+  EnMasse provides a self-service messaging platform with a uniform interface to manage different messaging technologies.
 github: [metadata]
 github_username: enmasseproject
 twitter_username: enmasseio
-email: enmasse@redhat.com
+email: 
 plugins_dir:
   - jekyll-menus
     #  - jekyll-asciidoc
