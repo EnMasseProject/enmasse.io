@@ -71,6 +71,11 @@ layout: page
 
 <br />
 
+## Articles
+
+* [EnMasse and Gitops](http://lulf.no/technical/kubernetes/enmasse/gitops/openshift/2019/04/08/gitops-and-enmasse.html)
+* [EnMasse and Gitops - Part 2 (Operations)](http://lulf.no/technical/kubernetes/enmasse/gitops/openshift/monitoring/prometheus/grafana/2019/05/06/gitops-and-enmasse-operations.html)
+
 ## Slides
 
 * Open sourcing the IoT [slides](https://www.slideshare.net/paolopat/open-sourcing-the-iot-93787899) (CloudConf, April 2018)
