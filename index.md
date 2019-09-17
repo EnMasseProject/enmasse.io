@@ -13,6 +13,7 @@ The <b>service admin</b> can deploy and manage messaging infrastructure, while <
 * Runs on <b>Kubernetes</b>: deploy <b>on-premise</b> or in the <b>cloud</b>
 * Different <b>messaging patterns</b> like request-response, pub-sub and events
 * Decouple <b>operation</b> of infrastructure from configuration and use by <b>applications</b>
+* Integration with <b>Eclipse Hono</b> to support multiple IoT protocols, device and tenant management
 
 EnMasse can be used for many purposes, such as moving your messaging infrastructure to the cloud <b>without depending on a specific cloud provider</b>, building a scalable messaging backbone for <b>IoT</b>, or just as a <b>cloud-ready</b> version of a message broker.
 
