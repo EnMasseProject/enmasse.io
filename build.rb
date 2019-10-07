@@ -68,6 +68,7 @@ VERSIONS.each do |version|
     `git -C #{CHECKOUT_DIR} pull --rebase`
 
     # Generate RESTAPI reference
+    `make SKIP_TESTS=true -C #{CHECKOUT_DIR}/api-server`
     `make -C #{CHECKOUT_DIR} docu_html`
 
     PLATFORMS.each do |platform|

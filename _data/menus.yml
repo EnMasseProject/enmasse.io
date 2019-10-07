@@ -9,48 +9,48 @@ header:
     title: Downloads
     identifier: downloads
 kubernetesdocslatest:
-  - url: /documentation/0.24.1/kubernetes
-    title: 0.24.1
-    identifier: 0.24.1-kubernetes
+  - url: /documentation/0.29.1/kubernetes
+    title: 0.29.1
+    identifier: 0.29.1-kubernetes
 kubernetesdocsall:
   - url: /documentation/master/kubernetes
     title: master
     identifier: master-kubernetes
-  - url: /documentation/0.24.1/kubernetes
-    title: 0.24.1
-    identifier: 0.24.1-kubernetes
+  - url: /documentation/0.29.1/kubernetes
+    title: 0.29.1
+    identifier: 0.29.1-kubernetes
 kubernetesdocsolder:
-  - url: /documentation/0.23.2/kubernetes
-    title: 0.23.2
-    identifier: 0.23.2-kubernetes
+  - url: /documentation/0.28.3/kubernetes
+    title: 0.28.3
+    identifier: 0.28.3-kubernetes
 kubernetesdocsmaster:
   - url: /documentation/master/kubernetes
     title: latest
     identifier: latest-kubernetes
 openshiftdocslatest:
-  - url: /documentation/0.24.1/openshift
-    title: 0.24.1
-    identifier: 0.24.1-openshift
+  - url: /documentation/0.29.1/openshift
+    title: 0.29.1
+    identifier: 0.29.1-openshift
 openshiftdocsall:
   - url: /documentation/master/openshift
     title: master
     identifier: master-openshift
-  - url: /documentation/0.24.1/openshift
-    title: 0.24.1
-    identifier: 0.24.1-openshift
+  - url: /documentation/0.29.1/openshift
+    title: 0.29.1
+    identifier: 0.29.1-openshift
 openshiftdocsolder:
-  - url: /documentation/0.23.2/openshift
-    title: 0.23.2
-    identifier: 0.23.2-openshift
+  - url: /documentation/0.28.3/openshift
+    title: 0.28.3
+    identifier: 0.28.3-openshift
 openshiftdocsmaster:
   - url: /documentation/master/openshift
     title: latest
     identifier: latest-openshift
 dllatest:
-  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.24.1
-    title: 0.24.1
-    identifier: 0.24.1
+  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.29.1
+    title: 0.29.1
+    identifier: 0.29.1
 dlolder:
-  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.23.2
-    title: 0.23.2
-    identifier: 0.23.2
+  - url: https://github.com/EnMasseProject/enmasse/releases/tag/0.28.3
+    title: 0.28.3
+    identifier: 0.28.3
