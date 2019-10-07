@@ -2,7 +2,7 @@
 require 'fileutils'
 
 PLATFORMS=["kubernetes", "openshift"]
-VERSIONS=["master", "0.29.1", "0.28.3", "0.27.2", "0.26.5"]
+VERSIONS=["master", "0.29.1", "0.28.3"]
 
 LATEST_VERSION=VERSIONS[1] 
 OLD_VERSIONS=VERSIONS.drop(2)
@@ -68,33 +68,13 @@ VERSIONS.each do |version|
     `git -C #{CHECKOUT_DIR} pull --rebase`
 
     # Generate RESTAPI reference
+    `make -C #{CHECKOUT_DIR} docu_html`
 
-    `make -C #{CHECKOUT_DIR}/templates clean`
-    `make -C #{CHECKOUT_DIR} templates`
-    if version == "0.23.2" or version == "0.24.1"
-    then
-        PLATFORMS.each do |platform|
-            doc_folder = "documentation/#{version}/#{platform}"
-            FileUtils.rm_rf(doc_folder)
-            FileUtils.mkdir_p("documentation/#{version}")
-            FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs", doc_folder)
-        end
-    else
-        PLATFORMS.each do |platform|
-            doc_folder = "documentation/#{version}/#{platform}"
-            FileUtils.rm_rf(doc_folder)
-            FileUtils.mkdir_p("documentation/#{version}")
-            FileUtils.cp_r("#{CHECKOUT_DIR}/templates/build/enmasse-latest/docs/#{platform}", doc_folder)
-        end
+    PLATFORMS.each do |platform|
+        doc_folder = "documentation/#{version}/#{platform}"
+        FileUtils.rm_rf(doc_folder)
+        FileUtils.mkdir_p("documentation/#{version}")
+
+        FileUtils.cp_r("#{CHECKOUT_DIR}/documentation/html/#{platform}", doc_folder)
     end
-
-    # Generate version index.md
-    #index_file = "documentation/#{version}/index.md"
-    #index = File.open(index_file, "w")
-    #index.puts("---")
-    #index.puts("title: Documentation for EnMasse #{version}")
-    #index.puts("layout: documentation_main")
-    #index.puts("---")
-    #index.puts("{% include documentation/#{version}/master.html %}")
-    #index.close()
 end
