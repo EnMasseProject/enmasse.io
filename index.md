@@ -34,7 +34,7 @@ Documentation can be found on the [Documentation](/documentation) page.
 ## Getting help
 
 * [EnMasse mailing list](https://www.redhat.com/mailman/listinfo/enmasse)
-* [#enmasse IRC channel on Freenode](https://webchat.freenode.net/?randomnick=1&channels=enmasse&uio=d4)
+* [Gitter](https://gitter.im/EnMasseProject/community)
 
 ## Contributing
 
