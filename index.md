@@ -42,7 +42,7 @@ If you've got some great ideas and use cases for EnMasse, we would love to hear 
 
 * Raise issues on [GitHub](https://github.com/EnMasseProject/enmasse/issues).
 * Read the [Hacking guide](https://github.com/EnMasseProject/enmasse/blob/master/HACKING.md) for details on how to build EnMasse.
-* Fix issues by opening Pull Requests
+* Fix issues by opening Pull Requests.
 
 ## License
 
